@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReporteMateriasOfertadas", "ReporteMateriasOfertadas\ReporteMateriasOfertadas.csproj", "{ADEB181A-2EB7-4DFF-B32E-458A2306B13B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADEB181A-2EB7-4DFF-B32E-458A2306B13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEB181A-2EB7-4DFF-B32E-458A2306B13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEB181A-2EB7-4DFF-B32E-458A2306B13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEB181A-2EB7-4DFF-B32E-458A2306B13B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0815916-D044-490A-83EB-A6F7CB7874D4}
+	EndGlobalSection
+EndGlobal
