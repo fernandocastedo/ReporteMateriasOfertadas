@@ -16,5 +16,11 @@ namespace ReporteMateriasOfertadas
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reporte obj1 = new Reporte();
+            obj1.ShowDialog();
+        }
     }
 }
