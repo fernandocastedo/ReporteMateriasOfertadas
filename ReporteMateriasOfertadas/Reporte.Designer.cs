@@ -35,9 +35,14 @@
             this.dataSet1 = new ReporteMateriasOfertadas.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spReporteMateriasOfertadasTableAdapter = new ReporteMateriasOfertadas.DataSet1TableAdapters.spReporteMateriasOfertadasTableAdapter();
+            this.universidadDBDataSet = new ReporteMateriasOfertadas.UniversidadDBDataSet();
+            this.spReporteMateriasOfertadasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.spReporteMateriasOfertadasTableAdapter1 = new ReporteMateriasOfertadas.UniversidadDBDataSetTableAdapters.spReporteMateriasOfertadasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.spReporteMateriasOfertadasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spReporteMateriasOfertadasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // spReporteMateriasOfertadasBindingSource
@@ -59,7 +64,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetMateriasOfertadas";
-            reportDataSource1.Value = this.spReporteMateriasOfertadasBindingSource;
+            reportDataSource1.Value = this.spReporteMateriasOfertadasBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ReporteMateriasOfertadas.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -73,6 +78,20 @@
             // 
             this.spReporteMateriasOfertadasTableAdapter.ClearBeforeFill = true;
             // 
+            // universidadDBDataSet
+            // 
+            this.universidadDBDataSet.DataSetName = "UniversidadDBDataSet";
+            this.universidadDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // spReporteMateriasOfertadasBindingSource1
+            // 
+            this.spReporteMateriasOfertadasBindingSource1.DataMember = "spReporteMateriasOfertadas";
+            this.spReporteMateriasOfertadasBindingSource1.DataSource = this.universidadDBDataSet;
+            // 
+            // spReporteMateriasOfertadasTableAdapter1
+            // 
+            this.spReporteMateriasOfertadasTableAdapter1.ClearBeforeFill = true;
+            // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -85,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.spReporteMateriasOfertadasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.universidadDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spReporteMateriasOfertadasBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +117,8 @@
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private DataSet1 dataSet1;
         private DataSet1TableAdapters.spReporteMateriasOfertadasTableAdapter spReporteMateriasOfertadasTableAdapter;
+        private System.Windows.Forms.BindingSource spReporteMateriasOfertadasBindingSource1;
+        private UniversidadDBDataSet universidadDBDataSet;
+        private UniversidadDBDataSetTableAdapters.spReporteMateriasOfertadasTableAdapter spReporteMateriasOfertadasTableAdapter1;
     }
 }

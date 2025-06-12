@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="UniversidadDBDataSet" targetNamespace="http://tempuri.org/UniversidadDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/UniversidadDBDataSet1.xsd" xmlns="http://tempuri.org/UniversidadDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -42,7 +42,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="UniversidadDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="UniversidadDBDataSet" msprop:Generator_DataSetName="UniversidadDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="spReporteMateriasOfertadas" msprop:Generator_RowEvHandlerName="spReporteMateriasOfertadasRowChangeEventHandler" msprop:Generator_RowDeletedName="spReporteMateriasOfertadasRowDeleted" msprop:Generator_RowDeletingName="spReporteMateriasOfertadasRowDeleting" msprop:Generator_RowEvArgName="spReporteMateriasOfertadasRowChangeEvent" msprop:Generator_TablePropName="spReporteMateriasOfertadas" msprop:Generator_RowChangedName="spReporteMateriasOfertadasRowChanged" msprop:Generator_RowChangingName="spReporteMateriasOfertadasRowChanging" msprop:Generator_TableClassName="spReporteMateriasOfertadasDataTable" msprop:Generator_RowClassName="spReporteMateriasOfertadasRow" msprop:Generator_TableVarName="tablespReporteMateriasOfertadas" msprop:Generator_UserTableName="spReporteMateriasOfertadas">

@@ -21,18 +21,51 @@ namespace ReporteMateriasOfertadas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int codCarrera = int.Parse(txtCodCarrera.Text);
-            int codPlan = int.Parse(txtCodPlanEstudio.Text);
-            int anio = int.Parse(txtAnio.Text);
-            string semestre = txtSemestre.Text;
+            try
+            {
+                // Validar que los campos no estén vacíos
+                if (string.IsNullOrWhiteSpace(txtCodCarrera.Text) ||
+                    string.IsNullOrWhiteSpace(txtCodPlanEstudio.Text) ||
+                    string.IsNullOrWhiteSpace(txtAnio.Text) ||
+                    string.IsNullOrWhiteSpace(txtSemestre.Text))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos.", "Campos requeridos",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            EjecutarReporte(codCarrera, codPlan, anio, semestre);
+                int codCarrera = int.Parse(txtCodCarrera.Text);
+                int codPlan = int.Parse(txtCodPlanEstudio.Text);
+                int anio = int.Parse(txtAnio.Text);
+                string semestre = txtSemestre.Text;
 
-            Reporte obj1 = new Reporte();
-            obj1.ShowDialog();
+                // Obtener los datos del reporte
+                DataTable dt = ObtenerDatosReporte(codCarrera, codPlan, anio, semestre);
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron materias para los parámetros especificados.",
+                                   "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Crear y mostrar el formulario de reporte pasándole los datos
+                Reporte formReporte = new Reporte(dt);
+                formReporte.ShowDialog();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Por favor, ingrese valores numéricos válidos en los campos correspondientes.",
+                               "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al generar el reporte: {ex.Message}", "Error",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void EjecutarReporte(int codCarrera, int codPlanEstudio, int anio, string semestre)
+        private DataTable ObtenerDatosReporte(int codCarrera, int codPlanEstudio, int anio, string semestre)
         {
             gdatos datos = new gdatos();
 
@@ -46,17 +79,7 @@ namespace ReporteMateriasOfertadas
                 new SqlParameter("@Semestre", SqlDbType.VarChar, 20) { Value = semestre }
             };
 
-            DataTable dt = datos.EjecutarConsultaConParametros(consulta, parametros);
-
-            var rds = new ReportDataSource("DataSet1", dt);
-
-            // Ensure 'reportViewer1' is properly declared and initialized
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.RefreshReport();
+            return datos.EjecutarConsultaConParametros(consulta, parametros);
         }
-
-        // Add the missing declaration for 'reportViewer1'
-        private ReportViewer reportViewer1;
     }
 }
