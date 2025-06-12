@@ -10,7 +10,7 @@ namespace ReporteMateriasOfertadas
 {
     public class gdatos
     {
-        private string cadenaConexion = @"Data Source=FERCASTEDO;Initial Catalog=UniversidadDB;Integrated Security=True";
+        private string cadenaConexion = @"Data Source=FERCASTEDO;Initial Catalog=UniversidadDB2;Integrated Security=True";
 
         public DataTable EjecutarConsulta(string consulta)
         {
