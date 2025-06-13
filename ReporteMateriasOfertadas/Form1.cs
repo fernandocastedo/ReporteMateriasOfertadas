@@ -50,7 +50,7 @@ namespace ReporteMateriasOfertadas
                 }
 
                 // Crear y mostrar el formulario de reporte pasándole los datos
-                Reporte formReporte = new Reporte(dt);
+                Reporte1 formReporte = new Reporte1(dt);
                 formReporte.ShowDialog();
             }
             catch (FormatException)

@@ -93,11 +93,11 @@
     <Compile Include="gdatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte.cs">
+    <Compile Include="Reporte1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte.Designer.cs">
-      <DependentUpon>Reporte.cs</DependentUpon>
+    <Compile Include="Reporte1.Designer.cs">
+      <DependentUpon>Reporte1.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteAsistencia.cs">
       <SubType>Form</SubType>
@@ -143,8 +143,8 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportAsistenciaEstudiantes.rdlc" />
-    <EmbeddedResource Include="Reporte.resx">
-      <DependentUpon>Reporte.cs</DependentUpon>
+    <EmbeddedResource Include="Reporte1.resx">
+      <DependentUpon>Reporte1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteAsistencia.resx">
       <DependentUpon>ReporteAsistencia.cs</DependentUpon>
